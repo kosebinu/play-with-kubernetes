@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rbac-test
+  namespace: demo
+spec:
+  serviceAccountName: demo-sa
+  containers:
+    - name: tester
+      image: bitnami/kubectl
+      command: ["sleep", "3600"]
